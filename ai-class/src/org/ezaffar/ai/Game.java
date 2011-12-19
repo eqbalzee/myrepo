@@ -58,10 +58,6 @@ public class Game {
     }
 
     public void generateStateSpace(Node startNode) {
-        // iterator over list of actions
-        // if state returned is not null
-        // and if state is not same as passed state
-        // add a new state to state space, generate a new node
         for (Action action: actions) {
             State newState = action.act(startNode.getState());
             if(newState != null)  {
